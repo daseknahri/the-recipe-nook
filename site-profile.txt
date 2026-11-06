@@ -1,0 +1,44 @@
+UNTITLED RECIPES SITE — site profile (human-readable twin of content/site-profile.json)
+
+⚠ PLACEHOLDER BRAND: the owner is picking the real name in parallel. The placeholder
+lives in ONE config place — content/site-profile.json (brand.name) — plus the child
+theme header (wp-content/themes/recipes-site/style.css) and the install title in
+docker/site-init.sh. The brand pass replaces those, regenerates brand/ art, and
+bumps RC_SEED_VERSION.
+
+Name:        UNTITLED RECIPES SITE (placeholder)
+Tagline:     Recipes · Tips · Guides
+Domain:      NOT decided — follows the brand (compose placeholder default
+             untitledrecipes.getemoji.site; nothing registered or configured)
+Market:      UK — en_GB, Europe/London, British English, UK measurements first
+             (grams, Celsius, gas mark). DEFAULT for this scaffold — the owner has
+             not specified market/language for this site; one config value to change.
+Byline:      UNTITLED RECIPES SITE Team (editorial team identity — no invented persona)
+Contact:     daseknahri@gmail.com
+
+Pillars (categories, publish by numeric ID once seeded):
+  Breakfast & Brunch · Main Dishes · Desserts & Baking · Quick & Easy ·
+  Kitchen Tips · Cooking Guides
+
+Taxonomy axis 2 (tag hubs, seeded empty): cuisines — British, Italian, Indian,
+  Mediterranean · methods — Slow Cooker, Air Fryer, One-Pan · occasions —
+  Weeknight, Weekend, Sunday Roast · diets — Vegetarian, Vegan, Budget ·
+  curation tags: Popular, Trending (the homepage rails read Trending;
+  Popular is held for editorial use)
+
+Recipe-native wiring (kepoli engine): build-v9 renders the visible recipe card +
+  schema.org/Recipe JSON-LD from the post's recipe fields (type "recipe" +
+  ingredients/steps/prep/cook/servings/course per the plugin BULK-IMPORT-CONTRACT);
+  the seed sets the theme noun vr_noun=recipe; Pinterest save stays ON.
+
+Trust pages: About · Contact · Privacy Policy · Terms · Cookie Policy ·
+  Editorial Policy (with the recipe honesty standard) · Corrections
+
+Brand: brand/BRAND.md — placeholder warm cream + herb green #3E6B34 + terracotta
+  #C4552B, Anton headlines, spoon-and-rosemary badge. Art is original generated
+  imagery only.
+
+Stack: build-v9 9.48.0 + viral-reader 1.9.37 (vendored from plgin main) +
+  recipes-site child theme 1.0.0; self-seeding Docker (germ pattern).
+Monetisation: AdSense getemoji-family publisher pub-6869205417923902, stage 1
+  (ads.txt served, ADSENSE_ENABLE=0, GA off) until the owner approves stage 2.
