@@ -1,20 +1,21 @@
 #!/usr/bin/env python3
-"""Recipes site (PLACEHOLDER BRAND) brand pack: icon set, logo lockups, OG card +
+"""The Recipe Nook brand pack: icon set, logo lockups, OG card +
 theme assets from generated art.
 
 Type is composited here (Anton), never baked by an image model. Run from the repo root:
     python3 brand/brand_compose.py
 Reads the two raw generations in this folder and writes the pack here, the child theme's
-assets/brand/ set, and content/images/. When the owner picks the real brand, regenerate
-the mark/hero, change the lockup text below, and re-run."""
+assets/brand/ set, and content/images/. Brand decided 2026-11-06: The Recipe Nook
+(owner delegated branding; picked from his shortlist). To refresh the pack, replace the
+raw art, keep the lockup text below in sync with content/site-profile.json, and re-run."""
 from PIL import Image, ImageDraw, ImageFont, ImageOps
 import os
 
 BASE = os.path.dirname(os.path.abspath(__file__))
 REPO = os.path.dirname(BASE)
 FONT = os.path.expanduser('~/.fonts/Anton-Regular.ttf')
-MARK = f'{BASE}/media-generation-recipes-site-mark-0-b9895246-6cf7-49c4-b437-67087f4ffdb9.webp'
-HERO = f'{BASE}/media-generation-recipes-site-hero-0-ec6d04b5-831e-4bc9-99a2-d353adc425c7.webp'
+MARK = f'{BASE}/media-generation-recipenook-mark-0-ded535e9-360b-401f-8ea4-e870726acf46.webp'
+HERO = f'{BASE}/media-generation-recipenook-hero-0-f7eca9fb-42ec-4a39-8079-d7a6d2d4608e.webp'
 THEME_BRAND = f'{REPO}/wp-content/themes/recipes-site/assets/brand'
 CONTENT_IMG = f'{REPO}/content/images'
 os.makedirs(THEME_BRAND, exist_ok=True)
@@ -30,8 +31,8 @@ GOLD = (217, 164, 65)
 art = Image.open(MARK).convert('RGB')
 S = min(art.size)
 art = art.crop(((art.width - S) // 2, (art.height - S) // 2, (art.width + S) // 2, (art.height + S) // 2)).resize((1024, 1024), Image.LANCZOS)
-# The badge fills ~82% of the frame, centred: crop to it, then circular-mask.
-art = art.crop((92, 92, 932, 932)).resize((1024, 1024), Image.LANCZOS)
+# The badge spans 132-1476px of the 1600px art (84-945 at 1024 scale), centred: crop to it, then circular-mask.
+art = art.crop((84, 84, 945, 945)).resize((1024, 1024), Image.LANCZOS)
 mask = Image.new('L', (1024, 1024), 0)
 md = ImageDraw.Draw(mask)
 md.ellipse([4, 4, 1020, 1020], fill=255)
@@ -49,7 +50,7 @@ def lockup(col_main, col_accent, path):
     f_title = ImageFont.truetype(FONT, 104)
     f_tag = ImageFont.truetype(FONT, 38)
     tmp = ImageDraw.Draw(Image.new('RGBA', (10, 10)))
-    parts = [('UNTITLED ', col_main), ('RECIPES', col_accent)]
+    parts = [('THE RECIPE ', col_main), ('NOOK', col_accent)]
     tw = sum(tmp.textlength(t, font=f_title) for t, _c in parts)
     tag = 'R E C I P E S   ·   T I P S   ·   G U I D E S'
     gw = tmp.textlength(tag, font=f_tag)
@@ -80,9 +81,9 @@ emb = icon.resize((150, 150), Image.LANCZOS)
 og.paste(emb, (48, 630 - 150 - 42), emb)
 f = ImageFont.truetype(FONT, 84)
 x = 224
-d.text((x, 630 - 172), 'UNTITLED ', font=f, fill=CREAM)
-x += d.textlength('UNTITLED ', font=f)
-d.text((x, 630 - 172), 'RECIPES', font=f, fill=GOLD)
+d.text((x, 630 - 172), 'THE RECIPE ', font=f, fill=CREAM)
+x += d.textlength('THE RECIPE ', font=f)
+d.text((x, 630 - 172), 'NOOK', font=f, fill=GOLD)
 og.save(f'{BASE}/og.jpg', quality=88)
 print('og done')
 

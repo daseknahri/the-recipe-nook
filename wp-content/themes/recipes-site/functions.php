@@ -1,6 +1,6 @@
 <?php
 /**
- * UNTITLED RECIPES SITE (theme slug "recipes-site") — child theme of Viral Reader for a UK
+ * The Recipe Nook (theme slug "recipes-site") — child theme of Viral Reader for a UK
  * recipes and kitchen know-how site, read mostly from social feeds and search on phones.
  * PLACEHOLDER BRAND: the working title lives in content/site-profile.json; when the owner
  * picks the real brand it is applied in one pass (this file's strings included).

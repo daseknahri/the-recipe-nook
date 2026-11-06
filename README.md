@@ -1,10 +1,10 @@
-# UNTITLED RECIPES SITE — placeholder brand (Style A self-seeding WordPress site)
+# The Recipe Nook (Style A self-seeding WordPress site)
 
-> **STATUS (2026-11-06): scaffold built + local QA passed. NOT launched.**
-> Brand name pending owner pick — the placeholder `UNTITLED RECIPES SITE`
-> lives in `content/site-profile.json` (the single config place) plus the
-> spots listed in `SITE-CARD-DRAFT.md`. No GitHub repo, no DNS, no Coolify
-> project, no deployment yet — those are owner-gated launch steps.
+> **STATUS (2026-11-06): scaffold built + local QA passed; brand pass done.**
+> Brand: **The Recipe Nook** (owner delegated branding; picked from his
+> shortlist). The name lives in `content/site-profile.json` (the single config
+> place) plus the spots listed in `SITE-CARD-DRAFT.md`. Launch (GitHub, DNS,
+> Coolify, deploy, first batch) follows the sibling sequence.
 
 A tips & recipes publication on the network pattern shared with Dales &
 Cobbles and Storyline UK: Docker WordPress, a self-seeding germ pattern,
@@ -47,10 +47,10 @@ docker compose -f docker-compose.yml -f docker-compose.local.yml down  # volumes
 
 ## Files of interest
 
-- `content/site-profile.json` — brand (placeholder), domain (placeholder),
+- `content/site-profile.json` — brand, domain,
   pillars, hubs, pages, feature flags. The ONE config place.
 - `seed/seed.php` — idempotent seeder (marker `rc_seed_version`).
-- `wp-content/themes/recipes-site/` — child theme (placeholder warm palette;
-  real palette arrives with the brand pass).
-- `brand/` — placeholder brand pack (original generated art) + `brand_compose.py`.
+- `wp-content/themes/recipes-site/` — child theme (warm cream / herb green /
+  terracotta palette).
+- `brand/` — brand pack (original generated art) + `brand_compose.py`.
 - `SITE-CARD-DRAFT.md` — full site card + placeholder TODOs + launch remainder.

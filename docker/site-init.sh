@@ -29,7 +29,7 @@ chown -R www-data:www-data /var/www/html/wp-content
 URL="${SITE_URL:-${SERVICE_FQDN_WORDPRESS:-http://localhost}}"
 if ! $WP core is-installed >/dev/null 2>&1; then
   log "installing WordPress at $URL"
-  $WP core install --url="$URL" --title="UNTITLED RECIPES SITE" --locale=en_GB \
+  $WP core install --url="$URL" --title="The Recipe Nook" --locale=en_GB \
     --admin_user="${WP_ADMIN_USER:-editor}" --admin_password="${WP_ADMIN_PASSWORD:?WP_ADMIN_PASSWORD missing}" \
     --admin_email="${WP_ADMIN_EMAIL:-admin@example.com}" --skip-email
   $WP language core install en_GB --activate || log "en_GB language pack download failed (site stays en_US until retried)"

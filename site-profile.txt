@@ -1,19 +1,19 @@
-UNTITLED RECIPES SITE — site profile (human-readable twin of content/site-profile.json)
+The Recipe Nook — site profile (human-readable twin of content/site-profile.json)
 
-⚠ PLACEHOLDER BRAND: the owner is picking the real name in parallel. The placeholder
-lives in ONE config place — content/site-profile.json (brand.name) — plus the child
-theme header (wp-content/themes/recipes-site/style.css) and the install title in
-docker/site-init.sh. The brand pass replaces those, regenerates brand/ art, and
-bumps RC_SEED_VERSION.
+Brand decided 2026-11-06: The Recipe Nook (owner delegated branding; picked from
+his shortlist). The name lives in ONE config place — content/site-profile.json
+(brand.name) — plus the child theme header (wp-content/themes/recipes-site/style.css)
+and the install title in docker/site-init.sh; brand/ art was regenerated in this
+identity and RC_SEED_VERSION bumped to 2.
 
-Name:        UNTITLED RECIPES SITE (placeholder)
+Name:        The Recipe Nook
 Tagline:     Recipes · Tips · Guides
-Domain:      NOT decided — follows the brand (compose placeholder default
-             untitledrecipes.getemoji.site; nothing registered or configured)
+Domain:      therecipenook.getemoji.site (free subdomain on getemoji.site,
+             the sibling pattern)
 Market:      UK — en_GB, Europe/London, British English, UK measurements first
              (grams, Celsius, gas mark). DEFAULT for this scaffold — the owner has
              not specified market/language for this site; one config value to change.
-Byline:      UNTITLED RECIPES SITE Team (editorial team identity — no invented persona)
+Byline:      The Recipe Nook Team (editorial team identity — no invented persona)
 Contact:     daseknahri@gmail.com
 
 Pillars (categories, publish by numeric ID once seeded):

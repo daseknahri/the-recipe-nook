@@ -1,18 +1,19 @@
-# UNTITLED RECIPES SITE — brand sheet (PLACEHOLDER)
+# The Recipe Nook — brand sheet
 
-**⚠ PLACEHOLDER BRAND.** The owner is picking the real name in parallel. Everything on
-this sheet is the placeholder kit: when the pick lands, regenerate the mark/hero in the
-new identity, change the lockup text in `brand_compose.py`, re-run it, replace
-`brand.name` in `content/site-profile.json`, bump `RC_SEED_VERSION`, done.
+**Brand decided 2026-11-06.** The owner delegated branding and media ("you take care
+of branding and medias"); "The Recipe Nook" was picked from his shortlist under that
+delegation. Mark + hero were regenerated in this identity, the lockup text in
+`brand_compose.py` carries the name (type composited, never baked by an image model),
+`brand.name` in `content/site-profile.json` is the single source, and
+`RC_SEED_VERSION` was bumped to 2.
 
-**Name:** UNTITLED RECIPES SITE
+**Name:** The Recipe Nook
 **Tagline:** Recipes · Tips · Guides
 **What it is:** UK recipes and kitchen know-how publication on the kepoli engine
 (build-v9 + viral-reader): breakfasts & brunch, main dishes, desserts & baking,
 quick & easy recipes, kitchen tips and cooking guides — written for UK home cooks
-(UK measurements first: grams, Celsius, gas mark; British English). Planned domain
-follows the brand (placeholder compose default: `untitledrecipes.getemoji.site` —
-not registered, not configured).
+(UK measurements first: grams, Celsius, gas mark; British English). Domain:
+`therecipenook.getemoji.site` (free subdomain on getemoji.site, the sibling pattern).
 
 ## Mark
 A wooden spoon and a rosemary sprig crossed inside a terracotta badge with a cream
@@ -22,7 +23,7 @@ text baked in. Files: `icon-512.png` (site icon), `apple-touch-180.png`,
 text, dark backgrounds). Type is composited (`brand_compose.py`, Anton), never baked
 by an image model.
 
-## Palette (placeholder)
+## Palette
 - Warm cream (base): `#FAF5EC` / soft `#F3EAD9` / surface `#FFFDF8`
 - Herb green (primary): `#3E6B34`, dark `#2F5227`
 - Terracotta (secondary): `#C4552B`, bright `#D97B3F`

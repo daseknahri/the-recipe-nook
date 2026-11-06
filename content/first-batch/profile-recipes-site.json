@@ -1,6 +1,6 @@
 {
   "site": "recipes-site",
-  "label": "UNTITLED RECIPES SITE (placeholder brand) — English recipes, tips and guides",
+  "label": "The Recipe Nook — English recipes, tips and guides",
   "taxonomy": ["2", "3", "4", "5", "6", "7"],
   "defaultCategory": "5",
   "defaultType": "recipe",

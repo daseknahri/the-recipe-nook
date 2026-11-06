@@ -4,7 +4,7 @@ services:
     restart: unless-stopped
     environment:
       - SERVICE_FQDN_WORDPRESS_80
-      - SITE_URL=${SITE_URL:-https://untitledrecipes.getemoji.site}
+      - SITE_URL=${SITE_URL:-https://therecipenook.getemoji.site}
       - SITE_EMAIL=${SITE_EMAIL:-daseknahri@gmail.com}
       - WORDPRESS_DB_HOST=db
       - WORDPRESS_DB_NAME=wordpress

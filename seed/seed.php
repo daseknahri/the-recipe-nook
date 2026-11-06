@@ -2,8 +2,8 @@
 /**
  * Recipes site seed — run by docker/site-init.sh via `wp eval-file` on every start.
  *
- * PLACEHOLDER BRAND: the site name/tagline come from content/site-profile.json
- * (brand.name currently "UNTITLED RECIPES SITE" until the owner picks the real brand).
+ * BRAND: the site name/tagline come from content/site-profile.json
+ * (brand.name = "The Recipe Nook" since the 2026-11-06 brand pass).
  *
  * Brand facts are read from content/site-profile.json (the ONE config place); the literals
  * below are fallbacks and must stay in sync with that file. A brand change is applied by
@@ -16,10 +16,10 @@
 
 if ( ! defined( 'ABSPATH' ) ) { exit; }
 
-const RC_SEED_VERSION = 1;
+const RC_SEED_VERSION = 2;
 const RC_DATA         = '/opt/site/data';
 const RC_BRAND_DIR    = WP_CONTENT_DIR . '/themes/recipes-site/assets/brand';
-const RC_AUTHOR_BIO   = 'UNTITLED RECIPES SITE is cooked and written by UK home cooks and recipe writers. Every recipe is written to be cooked from: plain steps, UK measurements first (grams, Celsius and gas mark), and times and yields stated exactly as they are — we never invent testing claims, ratings or results.';
+const RC_AUTHOR_BIO   = 'The Recipe Nook is cooked and written by UK home cooks and recipe writers. Every recipe is written to be cooked from: plain steps, UK measurements first (grams, Celsius and gas mark), and times and yields stated exactly as they are — we never invent testing claims, ratings or results.';
 
 require_once ABSPATH . 'wp-admin/includes/media.php';
 require_once ABSPATH . 'wp-admin/includes/file.php';
@@ -76,7 +76,7 @@ function rc_page( $slug, $title, $html, $status = 'publish' ) {
 function rc_seed_author() {
 	$p    = rc_profile();
 	$uid  = rc_admin_id();
-	$name = (string) ( $p['writer']['name'] ?? 'UNTITLED RECIPES SITE Team' );
+	$name = (string) ( $p['writer']['name'] ?? 'The Recipe Nook Team' );
 	$bio  = (string) ( $p['writer']['bio'] ?? RC_AUTHOR_BIO );
 	wp_update_user( array( 'ID' => $uid, 'display_name' => $name, 'nickname' => $name, 'description' => $bio ) );
 	$avatar = rc_brand_media( 'recipes-site-icon-512.png', $name );
@@ -124,7 +124,7 @@ function rc_hubs() {
 
 function rc_seed_site() {
 	$p    = rc_profile();
-	$name = (string) ( $p['brand']['name'] ?? 'UNTITLED RECIPES SITE' );
+	$name = (string) ( $p['brand']['name'] ?? 'The Recipe Nook' );
 	$tag  = (string) ( $p['brand']['tagline'] ?? 'Recipes · Kitchen Tips · Cooking Guides' );
 	$mail = rc_site_email();
 
