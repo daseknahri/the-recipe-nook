@@ -181,7 +181,7 @@ add_filter( 'the_content', function ( $content ) {
 		$out .= '<a class="rc-next" href="' . esc_url( get_permalink( $next ) ) . '">';
 		$thumb = get_the_post_thumbnail_url( $next, 'thumbnail' );
 		if ( $thumb ) { $out .= '<img src="' . esc_url( $thumb ) . '" alt="" width="120" height="120" loading="lazy">'; }
-		$out .= '<span><span class="rc-next__eyebrow">' . ( '1' === (string) get_post_meta( $next->ID, '_wpap_recipe_on', true ) ? 'Next recipe ' : 'Next up ' ) . ' . rc_icon( 'arrow' ) . '</span><span class="rc-next__title">' . esc_html( get_the_title( $next ) ) . '</span></span></a>';
+		$out .= '<span><span class="rc-next__eyebrow">' . ( '1' === (string) get_post_meta( $next->ID, '_wpap_recipe_on', true ) ? 'Next recipe ' : 'Next up ' ) . rc_icon( 'arrow' ) . '</span><span class="rc-next__title">' . esc_html( get_the_title( $next ) ) . '</span></span></a>';
 	}
 	$out .= '<p class="rc-note">' . esc_html( get_bloginfo( 'name' ) ) . ' is an independent recipe publication. Times and yields are stated plainly, as written — see our <a href="' . esc_url( home_url( '/editorial-policy/' ) ) . '">Editorial Policy</a>.</p>';
 	return $content . $out;
