@@ -1,10 +1,13 @@
 # The Recipe Nook (Style A self-seeding WordPress site)
 
-> **STATUS (2026-11-06): scaffold built + local QA passed; brand pass done.**
-> Brand: **The Recipe Nook** (owner delegated branding; picked from his
-> shortlist). The name lives in `content/site-profile.json` (the single config
-> place) plus the spots listed in `SITE-CARD-DRAFT.md`. Launch (GitHub, DNS,
-> Coolify, deploy, first batch) follows the sibling sequence.
+> **STATUS (2026-11-06): LAUNCHED + LIVE** at
+> https://therecipenook.getemoji.site — GitHub `daseknahri/the-recipe-nook`,
+> Coolify project `the-recipe-nook` (app abthhpkcojpznuyultnocxjj), first
+> batch published (8 recipes + 2 guides). Brand: **The Recipe Nook** (owner
+> delegated branding; picked from his shortlist). The name lives in
+> `content/site-profile.json` (the single config place). Canonical site card:
+> plgin `docs/sites/the-recipe-nook.md` (BL-136); repo-local summary in
+> `SITE-CARD-DRAFT.md`.
 
 A tips & recipes publication on the network pattern shared with Dales &
 Cobbles and Storyline UK: Docker WordPress, a self-seeding germ pattern,
